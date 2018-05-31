@@ -68,13 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
                             try {
                                 jsonObject = new JSONObject(response);
-                                jsonArray = jsonObject.getJSONArray("worldpopulation");
 
                                 for (int i = 0; i <jsonArray.length() ; i++)
                                 {
-                                    JSONObject country = (JSONObject)jsonArray.get(i);
-                                    String countries1 = country.getString("country");
-                                    arrayList.add(countries1);
+                                    JSONObject namestring = (JSONObject)jsonArray.get(i);
+                                    String nameset = namestring.getString("country");
+                                    arrayList.add(nameset);
 
 
                                 }
